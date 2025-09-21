@@ -37,7 +37,9 @@ vim.keymap.set('n', '<leader>w', ':write<CR>')
 vim.keymap.set('n', '<leader>q', ':quit<CR>')
 vim.keymap.set('n', '<leader>s', ':source<CR>')
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
---vim.keymap.set('n', '<leader>', '')
+vim.keymap.set('n', '<leader>n', ':tabnew<CR>:tabm<CR>')
+vim.keymap.set('n', '<leader>E', ':Explore<CR>')
+
 
 vim.lsp.config( 'luals', {
     cmd = { home .. '/.local/lua-language-server/bin/lua-language-server' },
@@ -66,6 +68,8 @@ vim.keymap.set( 'n', 'gd', vim.lsp.buf.definition )
 vim.keymap.set( 'n', 'gD', vim.lsp.buf.declaration )
 vim.keymap.set( 'n', 'gr', vim.lsp.buf.references )
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show line diagnostics' })
+
+
 
 
 
